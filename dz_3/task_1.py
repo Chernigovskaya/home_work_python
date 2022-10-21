@@ -11,8 +11,8 @@ def fibonacci(n):
     data.write(f' {n} первых элементов последовательности Фибоначчи:\n')
 
     for i in range(n+1):
-        data.writelines(str(num_1) + '\n')
         (num_1, num_2) = (num_2, num_1 + num_2)
+        data.writelines(str(num_1) + ' ')
 
 
 fibonacci(nums)
