@@ -11,7 +11,7 @@ def multipliers(num):
         if num % i == 0:
             lst.append(i)
             num = num // i
-            i = 2
+
         else:
             i += 1
     print(lst)
