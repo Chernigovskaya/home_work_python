@@ -8,3 +8,4 @@ from controller import writing_xml
 
 
 writing_xml()
+# select_phonebook()
