@@ -15,17 +15,18 @@ def matrix_rand():
     numbers = [0] * count_grop
     res = []
     for i in range(len(numbers)):
-        numbers[i] = list(random.randint(2, 5) for i in range(count_student))
-        medium = sum(numbers[i]) / count_student
+        numbers[i] = list(random.randint(2, 5) for i in range(random.randint(20, 30)))
+        medium = round(sum(numbers[i]) / len(numbers[i]), 2)
         res.append(medium)
-    # print(res)
+    print(res)
+    print(numbers)
     for _ in res:
         result = res.index(max(res))
-    print(f'{result + 1} группа имеет наилучшую успеваемость')
+    print(f'{result + 1} группа имеет наилучшую успеваемость, средний балл равен {medium}')
     return numbers
 
 
-matrix_rand()
-# numbers = matrix_rand()
-# print_matrix(numbers)
+# matrix_rand()
+numbers = matrix_rand()
+print_matrix(numbers)
 
