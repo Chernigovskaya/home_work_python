@@ -16,22 +16,53 @@ def create_phone():
     return phone
 
 
-# root = None
-# frm = None
-#
-#
+def add_contact():
+    create_user()
+    create_phone()
+
+
+
+
 # def select_phonebook():
 #     global root
 #     global frm
 #     root = Tk()
-#     frm = ttk.Frame(root, padding=30)
-#     frm.grid()
-#     ttk.Label(frm, text="Справочник").grid(column=0, row=0)
-#     ttk.Button(frm, text="Имя ", command=print_create_user()).grid(column=0, row=1)
-#     ttk.Button(frm, text="Телефон ", command=print_create_phone()).grid(column=0, row=2)
-#     ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=5)
 #
-#     root.mainloop()
+#     button_add_contact = Button(root, text="Добавить контакт ", command=add_contact)
+#     button_add_contact.grid(row=4, column=0, columnspan=2)
+#
+#     label_name = Label(root, text='Введите имя')
+#     label_name.grid(row=0, column=0)
+#     label_surname = Label(root, text='Введите фамилию')
+#     label_surname.grid(row=1, column=0)
+#     label_phone = Label(root, text='Введите телефон')
+#     label_phone.grid(row=2, column=0)
+
+
+    # ttk.Button(frm, text="Телефон ", command=print_create_phone()).grid(column=0, row=2)
+    # ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=5)
+
+root = Tk()
+root.geometry('300x200')
+
+button_add_contact = Button(root, text="Добавить контакт ", command=add_contact)
+button_add_contact.grid(row=4, column=0, columnspan=2)
+
+label_name = Label(root, text='Введите имя')
+label_name.grid(row=0, column=0)
+label_surname = Label(root, text='Введите фамилию')
+label_surname.grid(row=1, column=0)
+label_phone = Label(root, text='Введите телефон')
+label_phone.grid(row=2, column=0)
+
+# entry_name = Entry(root, width=15)
+# entry_name.grid(row=0, column=0)
+# entry_surname = Entry(root, width=15)
+# entry_surname.grid(row=1, column=0)
+# entry_phone = Entry(root, width=15)
+# entry_phone.grid(row=2, column=0)
+
+root.mainloop()
 #
 #
 # def print_create_user():
